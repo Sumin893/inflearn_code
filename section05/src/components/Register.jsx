@@ -33,8 +33,8 @@ const Register=() => {
 
   const onSubmit = () => {
     if(input.name === ""){
-      //이름을 입력하는 DOM요소 포커스
-      console.log(inputRef.current);
+      //2.ref객체 활용사례: 이름을 입력하는 DOM요소 포커스
+      inputRef.current.focus();
     }
   }
 
