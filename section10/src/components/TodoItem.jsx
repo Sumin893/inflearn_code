@@ -35,16 +35,18 @@ const TodoItem = ({
 };
 
 //고차 컴포넌트 (HOC)
-export default memo(TodoItem, (prevProps, nextProps) => {
+// export default memo(TodoItem, (prevProps, nextProps) => {
   //함수의 반환값에 따라, Props가 바뀌었는지 안바뀌었는지 판단
   //T = Props가 바뀌지 않음 -> 리렌더링 x
   //T = Props가 바뀜 -> 리렌더링 o
 
-  if(prevProps.id !== nextProps.id) return false;
-  if(prevProps.isDone !== nextProps.isDone) return false;
-  if(prevProps.content !== nextProps.content) return false;
-  if(prevProps.date !== nextProps.date) return false;
+//   if(prevProps.id !== nextProps.id) return false;
+//   if(prevProps.isDone !== nextProps.isDone) return false;
+//   if(prevProps.content !== nextProps.content) return false;
+//   if(prevProps.date !== nextProps.date) return false;
 
-  return true;
-});
+//   return true;
+// });
 //props가 같은 값인지 다른 값인지를 판단해서 이 TodoItem컴포넌트를 리렌더링 할지 말지를 결정.
+
+export default memo(TodoItem);
